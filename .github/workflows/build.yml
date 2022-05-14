@@ -16,4 +16,4 @@ jobs:
         git config --global user.name "GitHub Actions"
         git config --global user.email "<>"
         git add -f dist && git commit -m "Building GitHub page"
-        git subtree push --prefix dist origin gh-pages
+        git subtree push "https://${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git" --prefix dist origin gh-pages
