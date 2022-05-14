@@ -6,9 +6,9 @@ permissions:
   actions: write
   checks: write
   contents: write
-  deployments: write
-  id-token: write
-  issues: write
+  deployments: read
+  id-token: read
+  issues: read
   discussions: read
   packages: read
   pages: read
