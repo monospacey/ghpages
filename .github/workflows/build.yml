@@ -11,6 +11,7 @@ jobs:
     
     - name: Build and publish
       run: |
+        npm install
         npm run build
         git add -f dist && git commit -m "Building GitHub page"
         git subtree push --prefix dist origin gh-pages
