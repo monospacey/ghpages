@@ -1,0 +1,18 @@
+name: Build
+
+on:
+  push:
+    branches:
+      - build
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Build and publish
+      run: |
+        npm run build
+        git add -f dist && git commit -m "Building GitHub page"
+        git subtree push --prefix dist origin gh-pages
