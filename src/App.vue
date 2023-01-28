@@ -36,7 +36,7 @@ let x = setInterval(function() {
 
     <div class="wrapper">
       <HelloWorld msg="Justify & Bunkmate" />
-      <h3 id="demo"></h3>
+      <h2 id="demo"></h2>
     </div>
   </header>
 
@@ -58,6 +58,10 @@ let x = setInterval(function() {
 
 header {
   line-height: 1.5;
+}
+
+h2 {
+  text-align: center;
 }
 
 .logo {
